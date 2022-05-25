@@ -65,6 +65,51 @@ calc 로 계산할 수 있음
 }
 ```
 
-## data-
+## data attributes
 
 참고 : https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes
+
+HTML5 에서 추가된 속성
+
+커스텀속성을 지정할 수 있는 방법
+
+```html
+<body>
+    <div id="id-div" class="class-div" data-display-name="dream" data-index="1"></div>
+    <div id="id-div" class="class-div" data-display-name="coding" data-index="2"></div>
+</body>
+```
+
+data-display-name 속성의 배경을 변경할 수 있음
+
+```css
+[data-display-name='dream'] {
+    background-color: beige;
+}
+```
+
+특정 태그에만 적용 가능
+
+```html
+<body>
+    <div id="id-div" class="class-div" data-display-name="dream" data-index="1"></div>
+    <div id="id-div" class="class-div" data-display-name="coding" data-index="2"></div>
+    <span id="id-div" class="class-div" data-display-name="dream" data-index="1">zzzzzzzzz</span>
+</body>
+```
+
+data-display-name 속성의 배경을 변경할 수 있음
+
+```css
+div[data-display-name='dream'] {
+    background-color: beige;
+}
+```
+
+javascript 에서 document.querySelector 를 써서 선택 가능
+
+```js
+const dream = document.querySelector('div[data-display-name="dream"]')
+console.log(dream.dataset);
+console.log(dream.dataset.displayName); // dream
+```
