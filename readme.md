@@ -113,3 +113,50 @@ const dream = document.querySelector('div[data-display-name="dream"]')
 console.log(dream.dataset);
 console.log(dream.dataset.displayName); // dream
 ```
+
+## BEM
+
+Block Element Modifier
+
+block__element--modifier
+
+```css
+// card1
+.card
+.card__img
+.card__title
+.card__description
+.card__button
+
+// card2
+.card--dark
+.card__img
+.card__title
+.card__description
+.card__button--blue
+```
+
+component 단위로 작성한다
+
+cards 에 card 가 있는 경우
+
+```css
+.cards
+.card
+.card__title
+.card__descriptioin
+```
+
+BEM: http://getbem.com/introduction/
+
+BEM 101 by CSS-Tricks: https://css-tricks.com/bem-101/
+
+10 Common Problems And How To Avoid Them:
+
+https://www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-problems-and-how-to-avoid-them/
+
+## Navbar
+ 
+https://developer.mozilla.org/ko/docs/Web/HTML/Element/img
+
+
