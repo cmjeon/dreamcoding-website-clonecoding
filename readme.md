@@ -161,4 +161,6 @@ https://developer.mozilla.org/ko/docs/Web/HTML/Element/img
 
 ## box-sizing
 
+box-sizing : border-box;
+
 https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
