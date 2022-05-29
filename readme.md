@@ -175,3 +175,25 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_Block
 
 position: sticky 에는 top, left 지정이 필요
 
+## Centering trick
+
+flexbox 를 쓰지 않고 정렬하는 법
+
+### 수평정렬
+
+margin: auto 는 블록요소의 수평적 중간정렬
+
+text-align: center; 인라인요소의 수평적 중간정렬
+
+### 수직정렬
+
+transform: translate(50%, 50%) 블록요소의 수직적 중간정렬
+
+text-align에 대한 추가 설명:
+
+text-align은 블럭요소 안에서 그안의 컨텐츠들(텍스트 뿐만 아니라 버튼과 같은 인라인요소) 들을 정렬할때 쓸 수 있어요.
+
+margin에 대해서 더 공부해 보고 싶으시다면 MDN 사이트에서 ❤️
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/margin
+
