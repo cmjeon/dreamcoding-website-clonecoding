@@ -228,3 +228,10 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/transform
 
+## Magic animation
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/transition
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
+
+https://cubic-bezier.com/#.17,.67,.83,.67
