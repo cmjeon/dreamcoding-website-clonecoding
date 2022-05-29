@@ -169,5 +169,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/position
 
+## Sticky
+
 https://developer.mozilla.org/en-US/docs/Web/CSS/Containing_Block
+
+position: sticky 에는 top, left 지정이 필요
 
