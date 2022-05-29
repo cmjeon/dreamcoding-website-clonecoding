@@ -207,3 +207,20 @@ box 를 중앙에 두는 방법
   height: 200px;
   transform:translate(-50%, -50%);
 }
+
+## Responsive background
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/background
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/background-image
+
+.box1 {
+  background-image: url('');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.box2 {
+  background: center/cover no-repeat url('')
+}
+
