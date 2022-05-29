@@ -159,4 +159,6 @@ https://www.smashingmagazine.com/2016/06/battling-bem-extended-edition-common-pr
  
 https://developer.mozilla.org/ko/docs/Web/HTML/Element/img
 
+## box-sizing
 
+https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
