@@ -197,3 +197,13 @@ margin에 대해서 더 공부해 보고 싶으시다면 MDN 사이트에서 ❤
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/margin
 
+box 를 중앙에 두는 방법
+
+.box {
+  position:absolute;
+  top: 50%,
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  transform:translate(-50%, -50%);
+}
