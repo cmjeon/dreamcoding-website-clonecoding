@@ -130,6 +130,16 @@ p {
     border-radius: 4px;
 }
 
+
+.navbar__toggle-btn {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 24px;
+    color: var(--color-white);
+    display: none;
+}
+
 /* Home */
 
 #home {
@@ -438,7 +448,25 @@ p {
     transition: var(--animation-duration) ease;
 }
 
-.contact__links i:hover{
+.contact__links i:hover {
     transform: scale(1.1);
     color: var(--color-yellow);
+}
+
+/* For below 768px screen width */
+@media screen and (max-width: 768px) {
+    .navbar__toggle-btn {
+        display: block;
+    }
+    #navbar {
+        flex-display: column;
+        align-items: flex-start;
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
 }
