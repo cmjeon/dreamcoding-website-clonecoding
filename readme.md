@@ -235,3 +235,9 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/transition
 https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function
 
 https://cubic-bezier.com/#.17,.67,.83,.67
+
+## Transparent navbar
+
+MDN: Window.scrollY
+
+MDN: Determining the dimensions of elements
