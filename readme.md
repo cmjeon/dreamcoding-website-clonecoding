@@ -241,3 +241,8 @@ https://cubic-bezier.com/#.17,.67,.83,.67
 MDN: Window.scrollY
 
 MDN: Determining the dimensions of elements
+
+## Scroll to section
+
+https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
+
