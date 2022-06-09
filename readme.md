@@ -246,3 +246,6 @@ MDN: Determining the dimensions of elements
 
 https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView
 
+## Intersection Observer API
+
+https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
