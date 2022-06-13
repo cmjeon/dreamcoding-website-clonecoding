@@ -1,6 +1,17 @@
 'use strict'
 
 // Make navbar transparent when it is on the top
+const navbar = document.querySelector('#navbar');
+const navbarHeight = navbar.getBoundingClientRect().height;
+document.addEventListener('scroll', (event) => {
+  if (window.scrollY > navbarHeight) {
+    navbar.classList.add('navbar--dark');
+  } else {
+    navbar.classList.remove('navbar--dark');
+  }
+});
+
+// Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) => {
   const target = event.target;
@@ -10,18 +21,7 @@ navbarMenu.addEventListener('click', (event) => {
   }
   navbarMenu.classList.remove('open');
   scrollIntoView(link);
-});
-
-// Handle scrolling when tapping on the navbar menu
-const navbar = document.querySelector('#navbar');
-const navbarHeight = navbar.getBoundingClientRect().height;
-document.addEventListener('scroll', () => {
-  if(window.scrollY > navbarHeight) {
-    navbar.classList.add('navbar--dark');
-    navbarMenu.classList.remove('open');
-  } else {
-    navbar.classList.remove('navbar--dark');
-  }
+  selectNavItem(target);
 });
 
 
@@ -128,20 +128,28 @@ const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if(!entry.isIntersecting && entry.intersectionRatio > 0) {
       const index = sectionIds.indexOf(`#${entry.target.id}`);
-      let selectedIndex;
       if(entry.boundingClientRect.y < 0) {
-        selectedIndex = index + 1;
+        selectedNavIndex = index + 1;
       } else {
-        selectedIndex = index - 1;
+        selectedNavIndex = index - 1;
       }
     }
-    console.log(entry.target)
+    // console.log(entry.target)
   });
 }, observerOptions);
+
 sections.forEach(section => {
   observer.observe(section);
 })
 
 // 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화 시킨다.
+window.addEventListener('wheel', () => {
+  if(window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if(Math.round(window.scrollY + window.innerHeight) >= document.body.clientHeight) {
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+})
 
 
