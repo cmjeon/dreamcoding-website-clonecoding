@@ -110,6 +110,14 @@ const navItems = sectionIds.map(id => {
   return document.querySelector(`[data-link="${id}"]`)
 })
 
+let selectedNavIndex = 0;
+let selectedNavItem = navItems[selectedNavIndex];
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove('active');
+  selectedNavItem = selected;
+  selectedNavItem.classList.add('active');
+}
+
 // 2. IntersectionObserver 를 이용해서 모든 섹션들을 관찰한다.
 const observerOptions = {
   root: null,
@@ -118,6 +126,15 @@ const observerOptions = {
 }
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
+    if(!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+      let selectedIndex;
+      if(entry.boundingClientRect.y < 0) {
+        selectedIndex = index + 1;
+      } else {
+        selectedIndex = index - 1;
+      }
+    }
     console.log(entry.target)
   });
 }, observerOptions);
